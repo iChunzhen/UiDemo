@@ -13,8 +13,9 @@ import android.graphics.RectF;
 import android.graphics.Shader;
 import android.graphics.Xfermode;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * google APIDemo

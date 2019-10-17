@@ -61,7 +61,7 @@ public class GradientLayout extends View {
 //        mPaint.setMaskFilter(new BlurMaskFilter(10, BlurMaskFilter.Blur.NORMAL));//设置画笔遮罩滤镜 ,传入度数和样式
 //        mPaint.setTextScaleX(2);// 设置文本缩放倍数
 //        mPaint.setTextSize(38);// 设置字体大小
-//        mPaint.setTextAlign(Paint.Align.LEFT);//对其方式
+//        mPaint.setTextAlign(Paint.Align.LEFT);//对齐方式
 //        mPaint.setUnderlineText(true);// 设置下划线
 //
 //        String str = "Android高级工程师";
