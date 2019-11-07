@@ -29,7 +29,10 @@ public class XfermodesView extends View {
     private Bitmap mDstB;
     private Shader mBG;     // background checker-board pattern
 
-    //其中Sa全称为Source alpha表示源图的Alpha通道；Sc全称为Source color表示源图的颜色；Da全称为Destination alpha表示目标图的Alpha通道；Dc全称为Destination color表示目标图的颜色，[...,..]前半部分计算的是结果图像的Alpha通道值，“,”后半部分计算的是结果图像的颜色值。
+    //其中Sa全称为Source alpha表示源图的Alpha通道；
+    // Sc全称为Source color表示源图的颜色；
+    // Da全称为Destination alpha表示目标图的Alpha通道；
+    // Dc全称为Destination color表示目标图的颜色，[...,..]前半部分计算的是结果图像的Alpha通道值，“,”后半部分计算的是结果图像的颜色值。
     //效果作用于src源图像区域
     private static final Xfermode[] sModes = {
             //所绘制不会提交到画布上

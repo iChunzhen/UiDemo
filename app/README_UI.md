@@ -4,8 +4,6 @@
 
 ## UI原理与高级绘制
 
-`mall`项目致力于打造一个完整的电商系统，采用现阶段流行技术实现。
-
 ### UI绘制流程
 #### activity启动流程，源码分析
 #### UI绘制流程（测量， 布局， 绘制）
@@ -15,14 +13,23 @@
           mPaint.setARGB(255, 255, 255, 0); // 设置 Paint对象颜色,范围为0~255
           mPaint.setAlpha(200); // 设置alpha不透明度,范围为0~255
           mPaint.setAntiAlias(true); // 抗锯齿
-          mPaint.setStyle(Paint.Style.FILL); //描边效果
+          mPaint.setStyle(Paint.Style.FILL); //描边效果 还填充效果
           mPaint.setStrokeWidth(4);//描边宽度
+             BUTT    (0)
+             ROUND   (1)
+             SQUARE  
           mPaint.setStrokeCap(Paint.Cap.ROUND); //圆角效果
-          mPaint.setStrokeJoin(Paint.Join.MITER);//拐角风格
+            MITER   (0)
+            ROUND   (1)
+            BEVEL   (2);
+          mPaint.setStrokeJoin(Paint.Join.MITER);//拐角风格 三个
+          
           mPaint.setShader(new SweepGradient(200, 200, Color.BLUE, Color.RED)); //设置环形渲染器 着色器 
+          
           mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DARKEN)); //设置图层混合模式
+          
           mPaint.setColorFilter(new LightingColorFilter(0x00ffff, 0x000000)); //设置颜色过滤器
-          mPaint.setFilterBitmap(true); //设置双线性过滤
+          mPaint.setFilterBitmap(true); //设置双线性过滤 有无马赛克效果 是否平滑
           mPaint.setMaskFilter(new BlurMaskFilter(10, BlurMaskFilter.Blur.NORMAL));//设置画笔遮罩滤镜 ,传入度数和样式
           mPaint.setTextScaleX(2);// 设置文本缩放倍数
           mPaint.setTextSize(38);// 设置字体大小
@@ -31,10 +38,10 @@
 
           String str = "Android高级工程师";
           Rect rect = new Rect();
-          mPaint.getTextBounds(str, 0, str.length(), rect); //测量文本大小，将文本大小信息存放在rect中
+          mPaint.getTextBounds(str, 0, str.length(), rect); //测量文本大小，将文本大小信息存放在rect中  rect矩形区域
           mPaint.measureText(str); //获取文本的宽
-          mPaint.getFontMetrics(); //获取字体度量对象
-####     mPaint.setShader()设置环形渲染器 着色器 
+          mPaint.getFontMetrics(); //获取字体度量对象  各种基准线 用于计算字体高度等数据
+####     mPaint.setShader()设置环形渲染器 着色器  
             定义了平铺的3种模式： 
             static final Shader.TileMode CLAMP: 边缘拉伸.
             
@@ -105,6 +112,15 @@
                                 mShader = new ComposeShader(bitmapShader, linearGradient, PorterDuff.Mode.MULTIPLY);
                                 mPaint.setShader(mShader);
                                 canvas.drawCircle(250, 250, 250, mPaint);
+                                
+####        图层混合模式      PorterDuff.Mode.    18种              
+                                src 原图像
+                                dst 目标图像
+                                //1.ComposeShader
+                                //2.画笔Paint.setXfermode()
+                                //3.PorterDuffColorFilter
+                                
+                                先禁止硬件加速，高版本Android系统不支持
 ####    mPaint.setColorFilter(new LightingColorFilter(0x00ffff, 0x000000)); //设置颜色过滤器   滤镜    ColorFilter
        
        LightingColorFilter(@ColorInt int mul, @ColorInt int add)
@@ -128,4 +144,18 @@
 
 ## 项目介绍
 
+
+
+屏幕适配
+    限定符适配   dimens 增加大小 
+    百分比适配  抛弃dp px 用系统的presentLayout  不方便自定义控件
+    代码动态适配  UiUtils
+  
+  全面屏适配  
+    
+  toolbar   actionBar升级版
+    
+    
+    
+    
 Copyright (c) 2018-2019 macrozheng
