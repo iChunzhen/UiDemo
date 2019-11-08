@@ -39,7 +39,7 @@ public class DisplayCutoutActivity extends AppCompatActivity {
 
         //判断手机是否是刘海屏
         boolean hasDisplayCutout = hasDisplayCutout(window);
-        if (hasDisplayCutout){
+        if (hasDisplayCutout) {
             //2.让内容区域延伸进刘海
             WindowManager.LayoutParams params = window.getAttributes();
             /**
@@ -51,7 +51,9 @@ public class DisplayCutoutActivity extends AppCompatActivity {
             window.setAttributes(params);
 
             //3.设置成沉浸式
-            int flags = View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN;
+            int flags = View.SYSTEM_UI_FLAG_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                    | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN;
             int visibility = window.getDecorView().getSystemUiVisibility();
             visibility |= flags; //追加沉浸式设置
             window.getDecorView().setSystemUiVisibility(visibility);
@@ -73,10 +75,10 @@ public class DisplayCutoutActivity extends AppCompatActivity {
         DisplayCutout displayCutout;
         View rootView = window.getDecorView();
         WindowInsets insets = rootView.getRootWindowInsets();
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P && insets != null){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P && insets != null) {
             displayCutout = insets.getDisplayCutout();
-            if (displayCutout != null){
-                if (displayCutout.getBoundingRects() != null && displayCutout.getBoundingRects().size() > 0 && displayCutout.getSafeInsetTop() > 0){
+            if (displayCutout != null) {
+                if (displayCutout.getBoundingRects() != null && displayCutout.getBoundingRects().size() > 0 && displayCutout.getSafeInsetTop() > 0) {
                     return true;
                 }
             }
@@ -85,9 +87,9 @@ public class DisplayCutoutActivity extends AppCompatActivity {
     }
 
     //通常情况下，刘海的高就是状态栏的高
-    public int heightForDisplayCutout(){
+    public int heightForDisplayCutout() {
         int resID = getResources().getIdentifier("status_bar_height", "dimen", "android");
-        if (resID > 0){
+        if (resID > 0) {
             return getResources().getDimensionPixelSize(resID);
         }
         return 96;
