@@ -3,6 +3,13 @@
     xmlns:dist="http://schemas.android.com/apk/distribution"
     package="com.ichunzhen.ui">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,49 +17,40 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/MovieDetailActivityTheme">
-        <!--        <activity android:name="com.ichunzhen.ui.paint.colorfilter.ColorFilterActivity">-->
-        <!--        <activity android:name="com.ichunzhen.screenadapter.displaycutout.DisplayCutoutActivity">&lt;!&ndash;全面屏&ndash;&gt;-->
-        <!--        <activity android:name=".SplashActivity">--><!--平行动画-->
-        <!--        <activity android:name="com.ichunzhen.musicplayer.ToolbarActivity">&lt;!&ndash;网易歌单&ndash;&gt;-->
-        <!--        <activity android:name="com.ichunzhen.musicplayer.MusicListActivity">&lt;!&ndash;网易歌单&ndash;&gt;-->
-        <activity android:name="com.ichunzhen.materialdesign.MaterialActivity"><!--MaterialActivity-->
-            <!--        <activity android:name=".MainActivity">-->
+        <!-- <activity android:name="com.ichunzhen.ui.paint.colorfilter.ColorFilterActivity"> -->
+        <!-- <activity android:name="com.ichunzhen.screenadapter.displaycutout.DisplayCutoutActivity">&lt;!&ndash;全面屏&ndash;&gt; -->
+        <!-- <activity android:name=".SplashActivity"> -->
+        <!-- 平行动画 -->
+        <!-- <activity android:name="com.ichunzhen.musicplayer.ToolbarActivity">&lt;!&ndash;网易歌单&ndash;&gt; -->
+        <!-- <activity android:name="com.ichunzhen.musicplayer.MusicListActivity">&lt;!&ndash;网易歌单&ndash;&gt; -->
+        <!-- <activity android:name="com.ichunzhen.materialdesign.MaterialActivity"> -->
+        <!-- MaterialActivity -->
+        <!--<activity android:name="com.ichunzhen.recyclerview.RecyclerActivity"> --><!-- 自定义recyclerview -->
+        <activity android:name="com.ichunzhen.svgview.MapActivity"> <!-- 自定义recyclerview -->
+            <!-- <activity android:name=".MainActivity"> -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-
-        <!--materialdesign-->
+        </activity> <!-- materialdesign -->
         <activity
             android:name="com.ichunzhen.materialdesign.BottomNavigationViewActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.ichunzhen.materialdesign.ToolbarActivity"
             android:label="ToolbarActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.ichunzhen.materialdesign.MovieDetailActivity"
-            android:theme="@style/MovieDetailActivityTheme"></activity>
+            android:theme="@style/MovieDetailActivityTheme" />
         <activity
             android:name="com.ichunzhen.materialdesign.FloatTabActivity"
             android:label="美团"
-            android:theme="@style/FloatActivityTheme"></activity>
+            android:theme="@style/FloatActivityTheme" />
         <activity
             android:name="com.ichunzhen.materialdesign.VipActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-
-
     </application>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
-    <uses-permission android:name="android.permission.INTERNET" />
-
 
 </manifest>

@@ -89,7 +89,7 @@ public class GradientLayout extends View {
 //         */
 //        mShader = new LinearGradient(0, 0, 500, 500, new int[]{Color.RED, Color.BLUE, Color.GREEN}, new float[]{0.f,0.7f,1}, Shader.TileMode.REPEAT);
 //        mPaint.setShader(mShader);
-////        canvas.drawCircle(250, 250, 250, mPaint);
+//        canvas.drawCircle(250, 250, 250, mPaint);
 //        canvas.drawRect(0,0,1000,1000, mPaint);
 
 //        //        /**
@@ -139,11 +139,11 @@ public class GradientLayout extends View {
 //         * Xfermode mode： 组合两种shader颜色的模式
 //         * PorterDuff.Mode mode: 组合两种shader颜色的模式
 //         */
-        BitmapShader bitmapShader = new BitmapShader(mBitmap, Shader.TileMode.REPEAT, Shader.TileMode.REPEAT);
-        LinearGradient linearGradient = new LinearGradient(0, 0, 1000, 1600, new int[]{Color.RED, Color.GREEN, Color.BLUE}, null, Shader.TileMode.CLAMP);
-        mShader = new ComposeShader(bitmapShader, linearGradient, PorterDuff.Mode.MULTIPLY);
-        mPaint.setShader(mShader);
-        canvas.drawCircle(250, 250, 250, mPaint);
+//        BitmapShader bitmapShader = new BitmapShader(mBitmap, Shader.TileMode.REPEAT, Shader.TileMode.REPEAT);
+//        LinearGradient linearGradient = new LinearGradient(0, 0, 1000, 1600, new int[]{Color.RED, Color.GREEN, Color.BLUE}, null, Shader.TileMode.CLAMP);
+//        mShader = new ComposeShader(bitmapShader, linearGradient, PorterDuff.Mode.MULTIPLY);
+//        mPaint.setShader(mShader);
+//        canvas.drawCircle(250, 250, 250, mPaint);
 
     }
 }

@@ -19,6 +19,7 @@ public class ViewGroup extends  View {
 
     private TouchTarget mFirstTouchTarget;
 //    事件分发的入口
+    @Override
     public boolean dispatchTouchEvent(MotionEvent event) {
 //
         System.out.println(name+" dispatchTouchEvent ");

@@ -26,14 +26,14 @@ public class PathView extends View {
         super.onDraw(canvas);
 
 
-//        mPaint.setStyle(Paint.Style.FILL);
+        mPaint.setStyle(Paint.Style.FILL);
 //        //一阶贝塞尔曲线，表示的是一条直线
 //        mPath.moveTo(100, 70); //移动
 //        mPath.lineTo(140, 800);//连线
 //        //等同于上一行代码效果
 //        mPath.rLineTo(40,730);
 //        mPath.lineTo(250, 600);
-//        mPath.close();//设置曲线是否闭合
+        mPath.close();//设置曲线是否闭合
 //
 //        //添加子图形addXXX
         //添加弧形

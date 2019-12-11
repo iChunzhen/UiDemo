@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(new PathMeasureView(this));
+        setContentView(new PathView(this));
 
 //        setContentView(R.layout.activity_main);
 //        DragBubbleView bubbleView = findViewById(R.id.bubbleView);
@@ -46,13 +46,13 @@ public class MainActivity extends AppCompatActivity {
 //        vg.addView(LayoutInflater.from(this).inflate(R.layout.activity_splash_view, null));
 
 //        自定义动画
-        setContentView(R.layout.activity_main);
-        Button btn=findViewById(R.id.btn);
-
-        YObjectAnimator animator=YObjectAnimator.ofFloat(btn,"scaleX",1f,2f);
-        animator.setDuration(3000);
-        animator.setInterpolator(new LineInterpolator());
-        animator.start();
+//        setContentView(R.layout.activity_main);
+//        Button btn=findViewById(R.id.btn);
+//
+//        YObjectAnimator animator=YObjectAnimator.ofFloat(btn,"scaleX",1f,2f);
+//        animator.setDuration(3000);
+//        animator.setInterpolator(new LineInterpolator());
+//        animator.start();
 // MyObjectAnimator animators=MyObjectAnimator.ofFloat(btn,"scaleX",2f);
 //        animators.setDuration(3000);
 //        animators.start();

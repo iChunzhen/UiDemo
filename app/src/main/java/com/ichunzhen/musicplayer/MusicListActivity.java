@@ -31,6 +31,9 @@ import com.ichunzhen.ui.R;
 import jp.wasabeef.glide.transformations.BlurTransformation;
 
 
+/**
+ * 网易云音乐播放列表
+ */
 public class MusicListActivity extends AppCompatActivity {
 //    public final static String IMAGE_URL_MEDIUM = "http://p3.music.126.net/iRbTMHGfy-grDtx7o2T_dA==/109951164009413034.jpg";
     public final static String IMAGE_URL_MEDIUM = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573125275313&di=0d25465ad9273bc7935a2c23b60a9c45&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F4610b912c8fcc3cef70d70409845d688d53f20f7.jpg";

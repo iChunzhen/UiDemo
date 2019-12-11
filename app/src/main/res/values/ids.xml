@@ -2,4 +2,6 @@
 <resources>
     <item name="statusbar_view" type="id"/>
     <item name="translucent_view" type="id"/>
+
+    <item name="tag_type_view" type="id"/>
 </resources>
